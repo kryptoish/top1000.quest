@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A personal record of competitive standing — top-1000 rankings achieved and in progress across games, sports, and disciplines.">
+  <title>top1000.quest</title>
+
+  <!-- Favicon & device icons -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="logo.png">
+  <meta name="msapplication-TileImage" content="logo.png">
+  <meta name="msapplication-TileColor" content="#FAFAF8">
+  <meta name="theme-color" content="#FAFAF8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#111111" media="(prefers-color-scheme: dark)">
+
+  <!-- Open Graph (link previews) -->
+  <meta property="og:title" content="top1000.quest">
+  <meta property="og:description" content="A personal record of competitive standing — top-1000 rankings achieved and in progress.">
+  <meta property="og:image" content="logo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ── Header ─────────────────────────────────────────────── -->
+  <header>
+    <div class="container">
+      <div class="header-inner">
+        <span class="site-name">top1000.quest</span>
+        <nav>
+          <a href="#achieved">Achieved</a>
+          <a href="#ongoing">In Progress</a>
+        </nav>
+
+        <button id="theme-toggle" aria-label="Toggle dark mode">
+          <!-- Sun — shown in dark mode -->
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square">
+            <circle cx="12" cy="12" r="4"/>
+            <line x1="12" y1="2"  x2="12" y2="5"/>
+            <line x1="12" y1="19" x2="12" y2="22"/>
+            <line x1="2"  y1="12" x2="5"  y2="12"/>
+            <line x1="19" y1="12" x2="22" y2="12"/>
+            <line x1="4.22"  y1="4.22"  x2="6.34"  y2="6.34"/>
+            <line x1="17.66" y1="17.66" x2="19.78" y2="19.78"/>
+            <line x1="19.78" y1="4.22"  x2="17.66" y2="6.34"/>
+            <line x1="6.34"  y1="17.66" x2="4.22"  y2="19.78"/>
+          </svg>
+          <!-- Moon — shown in light mode -->
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <!-- ── Hero ─────────────────────────────────────────────── -->
+      <section class="hero">
+        <p class="hero-desc">
+          A personal record of competitive standings. Top-1000 rankings
+          reached and actively being pursued across many disciplines.
+        </p>
+
+        <div class="hero-stats">
+          <div class="stat-block">
+            <span class="stat-number" id="stat-achieved">—</span>
+            <span class="stat-label">Achieved</span>
+          </div>
+          <div class="stat-block">
+            <span class="stat-number" id="stat-ongoing">—</span>
+            <span class="stat-label">In Progress</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Achieved ──────────────────────────────────────────── -->
+      <section class="quest-section" id="achieved">
+        <div class="section-header">
+          <span class="section-title">Achieved</span>
+          <span class="section-count" id="achieved-count"></span>
+        </div>
+        <div class="quest-list" id="achieved-list"></div>
+      </section>
+
+      <!-- ── In Progress ───────────────────────────────────────── -->
+      <section class="quest-section" id="ongoing">
+        <div class="section-header">
+          <span class="section-title">In Progress</span>
+          <span class="section-count" id="ongoing-count"></span>
+        </div>
+        <div class="quest-list" id="ongoing-list"></div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ── Footer ─────────────────────────────────────────────── -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-name">Krish T</span>
+        <span class="footer-note">top1000.quest</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/data.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

@@ -121,7 +121,7 @@ const QUESTS = [
   },
   {
     id: 'coding',
-    name: 'Competitive Programming',
+    name: 'Leetcode/Variant',
     discipline: 'Coding',
     category: 'Technology',
     scope: 'World',

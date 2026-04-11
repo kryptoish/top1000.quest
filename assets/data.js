@@ -13,7 +13,7 @@ const QUESTS = [
   },
   {
     id: 'minecraft-sumo',
-    name: 'Sumo Duels',
+    name: 'Sumo Duels PvP',
     discipline: 'Minecraft',
     category: 'Gaming',
     scope: 'World',

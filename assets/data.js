@@ -69,7 +69,7 @@ const QUESTS = [
     status: 'ongoing',
     rank: 'Top 1000',
     note: null,
-    link: null,
+    link: 'https://www.chess.com/leaderboard/live/blitz/chess960?country=CA&page=20',
   },
   {
     id: 'rocket-league',

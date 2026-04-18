@@ -10,7 +10,7 @@ const QUESTS = [
     scope: 'World',
     platform: 'Formula SAE / Student',
     status: 'achieved',
-    rank: 'Top 1000 teams',
+    rank: 'Top 300 teams',
     note: 'UBC - Quadruna, Hexray, Septuna',
     link: 'https://fselo.get-racing.de/elo_website_electric/team/university_of_british_columbia___vancouver.html',
     images: [],

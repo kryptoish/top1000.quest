@@ -1,3 +1,6 @@
+//   images: ['assets/proof/my-photo.jpg', 'https://example.com/screenshot.png']
+//   details: 'A short paragraph with extra context about how/when this was achieved.'
+
 const QUESTS = [
   {
     id: 'formula-electric',
@@ -9,7 +12,9 @@ const QUESTS = [
     status: 'achieved',
     rank: 'Top 1000 teams',
     note: 'UBC - Quadruna, Hexray, Septuna',
-    link: null,
+    link: 'https://fselo.get-racing.de/elo_website_electric/team/university_of_british_columbia___vancouver.html',
+    images: [],
+    details: null,
   },
   {
     id: 'minecraft-sumo',
@@ -19,13 +24,15 @@ const QUESTS = [
     scope: 'World',
     platform: 'Minecraft Hypixel',
     status: 'achieved',
-    rank: 'Top 390',
+    rank: 'Top 400',
     note: 'Highest rank reached based on wins',
-    link: null,
+    link: 'https://www.youtube.com/watch?v=SwIkyd5lblg',
+    images: [],
+    details: null,
   },
   {
     id: 'rubiks-cube',
-    name: "3x3 Speedcube",
+    name: '3x3 Speedcube',
     discipline: "Rubik's Cube",
     category: 'Puzzle',
     scope: 'Canada',
@@ -34,6 +41,8 @@ const QUESTS = [
     rank: 'Top 1000',
     note: 'According to World Cube Association',
     link: 'https://cubingapp.com/ranks?region=Canada&page=10',
+    images: [],
+    details: null,
   },
   {
     id: 'soccer',
@@ -44,8 +53,10 @@ const QUESTS = [
     platform: 'BC Coastal League',
     status: 'achieved',
     rank: 'Top 30 teams',
-    note: 'Highest ranking - U18',
-    link: null,
+    note: 'Old team - Highest ranking - U18',
+    link: 'https://rankings.gotsport.com/teams/631587',
+    images: [],
+    details: null,
   },
   {
     id: 'summits',
@@ -53,11 +64,13 @@ const QUESTS = [
     discipline: 'Mountaineering',
     category: 'Outdoor',
     scope: 'Canada',
-    platform: null,
+    platform: 'Wedge Mountain',
     status: 'achieved',
-    rank: 'Top 143',
-    note: 'Top 143 prominent summits of Canada in winter',
+    rank: 'Top 150',
+    note: 'Top 1000 tallest/hardest summits of Canada (Winter)',
     link: null,
+    images: [],
+    details: null,
   },
   {
     id: 'chess-960',
@@ -70,6 +83,8 @@ const QUESTS = [
     rank: 'Top 1000',
     note: null,
     link: 'https://www.chess.com/leaderboard/live/blitz/chess960?country=CA&page=20',
+    images: [],
+    details: null,
   },
   {
     id: 'rocket-league',
@@ -82,6 +97,8 @@ const QUESTS = [
     rank: 'Top 1000',
     note: null,
     link: null,
+    images: [],
+    details: null,
   },
   {
     id: 'cs2',
@@ -94,6 +111,8 @@ const QUESTS = [
     rank: 'Top 1000',
     note: null,
     link: null,
+    images: [],
+    details: null,
   },
   {
     id: 'rock-climbing',
@@ -106,6 +125,8 @@ const QUESTS = [
     rank: 'Top 1000',
     note: null,
     link: null,
+    images: [],
+    details: null,
   },
   {
     id: 'billiards',
@@ -118,6 +139,8 @@ const QUESTS = [
     rank: 'Top 1000',
     note: null,
     link: null,
+    images: [],
+    details: null,
   },
   {
     id: 'coding',
@@ -130,5 +153,7 @@ const QUESTS = [
     rank: 'TBD',
     note: 'Format and platform to be determined',
     link: null,
+    images: [],
+    details: null,
   },
 ];

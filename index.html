@@ -14,7 +14,7 @@
   <meta name="theme-color" content="#FAFAF8" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#111111" media="(prefers-color-scheme: dark)">
 
-  <!-- Open Graph (link previews) -->
+  <!-- Open Graph -->
   <meta property="og:title" content="top1000.quest">
   <meta property="og:description" content="A personal record of competitive standing — top-1000 rankings achieved and in progress.">
   <meta property="og:image" content="logo.png">
@@ -23,10 +23,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script>
+    (function () {
+      var stored = localStorage.getItem('theme');
+      var prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+      document.documentElement.setAttribute('data-theme', stored ?? (prefersLight ? 'light' : 'dark'));
+    })();
+  </script>
 </head>
 <body>
 
-  <!-- ── Header ─────────────────────────────────────────────── -->
+  <!-- ── Header ────────────────────────────────────────────────── -->
   <header>
     <div class="container">
       <div class="header-inner">
@@ -61,8 +68,11 @@
   <main>
     <div class="container">
 
-      <!-- ── Hero ─────────────────────────────────────────────── -->
+      <!-- ── Hero ──────────────────────────────────────────────── -->
       <section class="hero">
+        <h1 class="hero-title">
+          <span class="hero-hash">#</span>Top&nbsp;1000
+        </h1>
         <p class="hero-desc">
           A personal record of competitive standings. Top-1000 rankings
           reached and actively being pursued across many disciplines.
@@ -80,7 +90,7 @@
         </div>
       </section>
 
-      <!-- ── Achieved ──────────────────────────────────────────── -->
+      <!-- ── Achieved ───────────────────────────────────────────── -->
       <section class="quest-section" id="achieved">
         <div class="section-header">
           <span class="section-title">Achieved</span>
@@ -89,7 +99,7 @@
         <div class="quest-list" id="achieved-list"></div>
       </section>
 
-      <!-- ── In Progress ───────────────────────────────────────── -->
+      <!-- ── In Progress ────────────────────────────────────────── -->
       <section class="quest-section" id="ongoing">
         <div class="section-header">
           <span class="section-title">In Progress</span>
@@ -101,7 +111,7 @@
     </div>
   </main>
 
-  <!-- ── Footer ─────────────────────────────────────────────── -->
+  <!-- ── Footer ────────────────────────────────────────────────── -->
   <footer>
     <div class="container">
       <div class="footer-inner">
@@ -110,6 +120,24 @@
       </div>
     </div>
   </footer>
+
+  <!-- ── Quest Detail Modal ─────────────────────────────────────── -->
+  <div id="quest-modal" class="modal-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-panel">
+      <button class="modal-close" id="modal-close" aria-label="Close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <!-- ── Lightbox ───────────────────────────────────────────────── -->
+  <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <img id="lightbox-img" src="" alt="" class="lightbox-img">
+  </div>
 
   <script src="assets/data.js"></script>
   <script src="assets/app.js"></script>

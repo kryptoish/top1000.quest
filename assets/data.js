@@ -105,7 +105,7 @@ const QUESTS = [
     name: 'Counter-Strike 2',
     discipline: 'CS2',
     category: 'Gaming',
-    scope: 'Canada',
+    scope: 'NA',
     platform: '28.6k Premier or Faceit lvl 10/2.05k elo',
     status: 'ongoing',
     rank: 'Top 1000',

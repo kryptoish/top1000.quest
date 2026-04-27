@@ -682,6 +682,13 @@ footer {
   color: var(--color-text-muted);
 }
 
+.footer-quote {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+  text-align: center;
+}
+
 /* ─── Responsive ─────────────────────────────────────────────── */
 
 @media (min-width: 1280px) {

@@ -28,70 +28,10 @@
       var stored = localStorage.getItem('theme');
       var prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
       document.documentElement.setAttribute('data-theme', stored ?? (prefersLight ? 'light' : 'dark'));
-
-      if (window.matchMedia) {
-        window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', function (e) {
-          if (!localStorage.getItem('theme')) {
-            document.documentElement.setAttribute('data-theme', e.matches ? 'light' : 'dark');
-          }
-        });
-      }
     })();
   </script>
 </head>
 <body>
-
-  <!-- =========================================================================
-       TEMPORARY "PAGE CLOSED" NOTICE
-       -------------------------------------------------------------------------
-       To restore the site in the future, do EITHER of the following:
-         Option 1: Delete everything between [START PAGE CLOSED] and [END PAGE CLOSED] below.
-         Option 2: Restore from backup: cp index.original.html index.html
-       ========================================================================= -->
-  <!-- [START PAGE CLOSED] -->
-  <style id="page-closed-style">
-    #page-closed-notice {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: var(--color-bg);
-      color: var(--color-text);
-      z-index: 2147483647;
-      margin: 0;
-      padding: 1.5rem;
-      box-sizing: border-box;
-      user-select: none;
-    }
-
-    #page-closed-notice p {
-      font-family: var(--font-mono);
-      font-size: clamp(1.1rem, 2.5vw, 1.35rem);
-      font-weight: 400;
-      letter-spacing: -0.01em;
-      color: var(--color-text);
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-
-    body:has(#page-closed-notice) {
-      overflow: hidden !important;
-    }
-
-    body:has(#page-closed-notice) > :not(#page-closed-notice):not(#page-closed-style) {
-      display: none !important;
-    }
-  </style>
-
-  <div id="page-closed-notice" role="status" aria-live="polite">
-    <p>Page Closed Currently</p>
-  </div>
-  <!-- [END PAGE CLOSED] -->
 
   <!-- ── Header ────────────────────────────────────────────────── -->
   <header>

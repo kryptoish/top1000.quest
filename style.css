@@ -36,6 +36,20 @@
   --color-ongoing:      #111111;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-bg:           #111111;
+    --color-surface:      #1A1A18;
+    --color-text:         #EDECEA;
+    --color-text-mid:     #AAAAAA;
+    --color-text-muted:   #666666;
+    --color-border:       #2A2A28;
+    --color-border-strong:#EDECEA;
+    --color-achieved:     #EDECEA;
+    --color-ongoing:      #111111;
+  }
+}
+
 html {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
